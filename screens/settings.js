@@ -1,22 +1,16 @@
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const Tab = createBottomTabNavigator();
 
-// import screens
-function HomeScreen() {
-  /* 
-    1. calculator/home/tips/tutorial
-    2. weights
-    3. cardio
-    4. stretching
-  */
+function SettingsScreen() {
+
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>Home Screen</Text>
+        <Text>Settings Screen</Text>
       </View>
     );
   
 }
 
-export default HomeScreen;
+export default SettingsScreen;
