@@ -11,7 +11,7 @@ const Tab = createBottomTabNavigator();
 //3b. create section for intermediate same as above
 function CardioScreen() {
     return (
-      <View>
+      <View styles={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <Text>Cardio Screen</Text>
       </View>
     );

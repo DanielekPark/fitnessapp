@@ -11,7 +11,7 @@ const Tab = createBottomTabNavigator();
 //3b. create section for intermediate same as above
 function StretchingScreen() {
     return (
-      <View>
+      <View styles={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <Text>Stretching Screen</Text>
       </View>
     );

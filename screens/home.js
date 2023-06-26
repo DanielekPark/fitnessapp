@@ -11,9 +11,16 @@ const Tab = createBottomTabNavigator();
 //3b. create section for intermediate same as above
 function HomeScreen() {
     return (
-      <View>
-        <Text>Home Screen</Text>
-      </View>
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Text>Home Screen</Text>
+      {/* Tutorial/instructions */}
+
+      {/* Calculator */}
+
+      {/* Workout option days-
+        routes to screeens
+      */}
+    </View>
     );
   
 }
