@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { View, Text } from "react-native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Calculator from "../components/calculator/calculator";
 import { ListItem } from "@rneui/themed";
 
@@ -31,37 +30,54 @@ function HomeScreen() {
     setTabs(findTab);
   };
 
-  useEffect(() => {
-    console.log(tabs[1]);
-  }, [tabs]);
-
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Home Screen</Text>
-      {/* Tutorial/instructions */}
 
-      <View>
-        <ListItem>
-          <ListItem.Accordion
-            onPress={() => toggleTab("Tutorial")}
-            isExpanded={tabs[0].isOpen}
-            content={<Text>Tutorial</Text>}
-          ></ListItem.Accordion>
-        </ListItem>
-        <ListItem>
-          <ListItem.Accordion
-            content={<Text>Calculator</Text>}
-            onPress={() => toggleTab("Calculator")}
-            isExpanded={tabs[1].isOpen}
-          ></ListItem.Accordion>
-        </ListItem>
-        <ListItem>
-          <ListItem.Accordion
-            onPress={() => toggleTab("Tips")}
-            isExpanded={tabs[2].isOpen}
-            content={<Text>Tips</Text>}
-          ></ListItem.Accordion>
-        </ListItem>
+      {/* Tutorial/instructions */}
+      <View style={{width: '95%'}}>
+        <ListItem.Accordion
+          onPress={() => toggleTab("Tutorial")}
+          isExpanded={tabs[0].isOpen}
+          content={<ListItem.Title style={{width: '90%'}}>Tutorial</ListItem.Title>}
+          topDivider
+          bottomDivider
+        >
+          <ListItem>
+          <View>
+            <Text>Tutorial</Text>
+          </View>
+          </ListItem>
+        </ListItem.Accordion>
+
+        {/* Calculator */}
+        <ListItem.Accordion
+          onPress={() => toggleTab("Calculator")}
+          isExpanded={tabs[1].isOpen}
+          content={<ListItem.Title style={{width: '90%'}}>Calculator</ListItem.Title>}
+          topDivider
+          bottomDivider
+        >
+          <ListItem>
+            <Calculator />
+          </ListItem>
+        </ListItem.Accordion>
+
+        {/* Tips */}
+        <ListItem.Accordion
+          onPress={() => toggleTab("Tips")}
+          isExpanded={tabs[2].isOpen}
+          content={<ListItem.Title style={{width: '90%'}}>Tips</ListItem.Title>}
+          topDivider
+          bottomDivider
+        >
+          <ListItem>
+            <View>
+              <Text>
+                Tips
+              </Text>
+            </View>
+          </ListItem>
+        </ListItem.Accordion>
       </View>
     </View>
   );

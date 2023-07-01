@@ -25,13 +25,17 @@ function Calculator() {
   };
 
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Calculator</Text>
+    // <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View>
       <View>
-        <Text>{fitData.oneRepMax ? `Estimated 1 repetition max ${fitData.oneRepMax}` : ''}</Text>
+        <Text>
+          {fitData.oneRepMax
+            ? `Estimated 1 repetition max ${fitData.oneRepMax}`
+            : ""}
+        </Text>
         <View>
           <Input
-          inputMode="numeric"
+            inputMode="numeric"
             maxLength={3}
             placeholder="Estimated weight"
             onChangeText={(value) => setFitData({ ...fitData, weight: value })}
