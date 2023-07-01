@@ -4,19 +4,11 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Calculator from "../components/calculator/calculator";
 import { Input, Icon, Button } from "@rneui/themed";
 
-// 2. set up home screen include calculator
-// 2a. select workout intermediate
-//2b. route to cardio/weights/stretching
-//3. Create sections of beginner 2-3 days
-//3. Create section for muscle groups (e.g. chest, abs, legs etc)
-//3b. create section for intermediate same as above
-
 function CalculatorScreen() {
   const [fitData, setFitData] = useState({
     weight: "",
     reps: "",
     oneRepMax: "",
-    showResult: false,
   });
 
   //Calculates recommended weight based on weight & repetitions data
@@ -32,10 +24,6 @@ function CalculatorScreen() {
     setFitData({ ...fitData, weight: weight });
     setFitData({ ...fitData, oneRepMax: `${oneRepMax}` });
   };
-
-  useEffect(() => {
-    console.log(fitData);
-  }, [fitData])
 
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>

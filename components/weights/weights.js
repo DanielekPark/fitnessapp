@@ -2,6 +2,8 @@ import { View } from "react-native";
 
 const Weights = () => {
   /* 
+  //check if any options from the home screen were chosen if not
+  //provide options below
 weights
 1a. For beginners
 2. exercise goal (muscle or strength)
