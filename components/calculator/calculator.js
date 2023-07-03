@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { View, Text } from "react-native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Input, Icon, Button } from "@rneui/themed";
+import { View, Dimensions } from "react-native";
+import { Button, Divider, Text, Input } from "@rneui/themed";
+import styles from "../../styles/style.module";
 
 function Calculator() {
   const [fitData, setFitData] = useState({
@@ -12,8 +12,10 @@ function Calculator() {
 
   //Calculates recommended weight based on weight & repetitions data
   const calcStrength = () => {
+    //converts data received from user to number
     const weight = fitData.weight / 1;
     const repetitions = fitData.reps / 1;
+    
     if (!weight || weight < 7) return;
     if (!repetitions) return;
     if (repetitions < 1 || repetitions > 15) return;
@@ -25,40 +27,36 @@ function Calculator() {
   };
 
   return (
-    // <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-    <View>
+    <View style={[styles.calcWrapper, {height: Dimensions.get('window').height/2}]}>
       <View>
-        <Text>
-          {fitData.oneRepMax
-            ? `Estimated 1 repetition max ${fitData.oneRepMax}`
-            : ""}
-        </Text>
+        <View>
+          <Text h3 style={{textAlign: 'center', marginBottom: 15}}>
+            Calculate your strength
+          </Text>
+          <Text style={[styles.centerText, styles.fontTwoFive, {marginBottom: 15}]}>
+            {fitData.oneRepMax
+              ? `Estimated 1 repetition max ${fitData.oneRepMax}`
+              : ""}
+          </Text>
+        </View>
         <View>
           <Input
             inputMode="numeric"
             maxLength={3}
-            placeholder="Estimated weight"
+            placeholder="Weight used"
             onChangeText={(value) => setFitData({ ...fitData, weight: value })}
+            inputContainerStyle={styles.inputContainer}
+            inputStyle={styles.inputStyle}
           />
           <Input
             inputMode="numeric"
             maxLength={2}
             placeholder="Reps completed"
             onChangeText={(value) => setFitData({ ...fitData, reps: value })}
+            inputContainerStyle={styles.inputContainer}
+            inputStyle={styles.inputStyle}
           />
-          <Button
-            title="Calculate"
-            buttonStyle={{
-              backgroundColor: "rgba(78, 116, 289, 1)",
-              borderRadius: 3,
-            }}
-            containerStyle={{
-              width: 200,
-              marginHorizontal: 50,
-              marginVertical: 10,
-            }}
-            onPress={calcStrength}
-          />
+          <Button buttonStyle={styles.calcBtn} title="Calculate" onPress={calcStrength} containerStyle={{marginTop: 100}} />
         </View>
       </View>
     </View>
