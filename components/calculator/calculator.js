@@ -30,16 +30,16 @@ function Calculator() {
     <View style={[styles.calcWrapper, {height: Dimensions.get('window').height/2}]}>
       <View>
         <View>
-          <Text h3 style={{textAlign: 'center', marginBottom: 15}}>
+          <Text style={[styles.fontTwenty, styles.centerText, styles.smMarBottom, styles.smMarTop]}>
             Calculate your strength
           </Text>
-          <Text style={[styles.centerText, styles.fontTwoFive, {marginBottom: 15}]}>
+          <Text style={[styles.centerText, styles.smMarBottom,]}>
             {fitData.oneRepMax
               ? `Estimated 1 repetition max ${fitData.oneRepMax}`
               : ""}
           </Text>
         </View>
-        <View>
+        <View style={styles.smMarTop}>
           <Input
             inputMode="numeric"
             maxLength={3}

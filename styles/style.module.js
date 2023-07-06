@@ -2,13 +2,28 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     /* =======================
+    Accordion styles
+    ======================= */
+  accordionFont: {
+    fontSize: 23
+  },
+    /* =======================
+    Spacing
+    ======================= */
+    smMarTop: {
+      marginTop: 15
+    },
+    smMarBottom: {
+      marginTop: 15
+    },
+    /* =======================
     Text styles 
     ======================= */
   centerText: {
     textAlign: 'center'
   },
-  fontTwoFive: {
-    fontSize: 25
+  fontTwenty: {
+    fontSize: 20
   },
   /* =======================
     Calculator styles 

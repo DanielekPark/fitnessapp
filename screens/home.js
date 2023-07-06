@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, ScrollView } from "react-native";
 import Calculator from "../components/calculator/calculator";
 import { ListItem } from "@rneui/themed";
+import styles from "../styles/style.module";
 
 function HomeScreen() {
   const [tabs, setTabs] = useState([
@@ -33,7 +34,6 @@ function HomeScreen() {
   return (
     <ScrollView>
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: 'white' }}>
-        {/* Place logo here? */}
         
         {/* Tutorial/instructions */}
         <View style={{ width: "95%" }}>
@@ -41,7 +41,7 @@ function HomeScreen() {
             onPress={() => toggleTab("Tutorial")}
             isExpanded={tabs[0].isOpen}
             content={
-              <ListItem.Title style={{ width: "90%" }}>Tutorial</ListItem.Title>
+              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont]}>Tutorial</ListItem.Title>
             }
             topDivider
             bottomDivider
@@ -58,7 +58,7 @@ function HomeScreen() {
             onPress={() => toggleTab("Calculator")}
             isExpanded={tabs[1].isOpen}
             content={
-              <ListItem.Title style={{ width: "90%" }}>
+              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont]}>
                 Calculator
               </ListItem.Title>
             }
@@ -75,7 +75,7 @@ function HomeScreen() {
             onPress={() => toggleTab("Tips")}
             isExpanded={tabs[2].isOpen}
             content={
-              <ListItem.Title style={{ width: "90%" }}>Tips</ListItem.Title>
+              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont]}>Tips</ListItem.Title>
             }
             topDivider
             bottomDivider
