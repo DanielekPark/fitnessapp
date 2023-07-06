@@ -22,10 +22,7 @@ function WeightsScreen() {
         //2d. or user can create a new workout, and then follows step 2
         //3. workout schedule is provided after data submission
       */}
-
       </View>
-
-
     </View>
   );
 }

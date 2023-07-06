@@ -1,29 +1,35 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-    /* =======================
+  /* =======================
+    Font color
+    ======================= */
+  aqua: {
+    color: "#0ff",
+  },
+  /* =======================
     Accordion styles
     ======================= */
   accordionFont: {
-    fontSize: 23
+    fontSize: 23,
   },
-    /* =======================
+  /* =======================
     Spacing
     ======================= */
-    smMarTop: {
-      marginTop: 15
-    },
-    smMarBottom: {
-      marginTop: 15
-    },
-    /* =======================
+  smMarTop: {
+    marginTop: 15,
+  },
+  smMarBottom: {
+    marginTop: 15,
+  },
+  /* =======================
     Text styles 
     ======================= */
   centerText: {
-    textAlign: 'center'
+    textAlign: "center",
   },
   fontTwenty: {
-    fontSize: 20
+    fontSize: 20,
   },
   /* =======================
     Calculator styles 
@@ -41,7 +47,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   calcBtn: {
-    backgroundColor: "rgba(78, 116, 289, 1)",
+    backgroundColor: "#0ff",
     borderRadius: 5,
     width: 300,
     marginLeft: "auto",

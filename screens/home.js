@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, ActivityIndicator, Image} from "react-native";
 import Calculator from "../components/calculator/calculator";
-import { ListItem } from "@rneui/themed";
+import { ListItem} from "@rneui/themed";
 import styles from "../styles/style.module";
 
 function HomeScreen() {
@@ -34,8 +34,13 @@ function HomeScreen() {
   return (
     <ScrollView>
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: 'white' }}>
-        
-        {/* Tutorial/instructions */}
+        {/*====== LOGO =======*/}
+        <Image             
+          source={require('../assets/dumbbell.png')}
+          style={{height: 200, width: 200}}
+        />
+
+        {/*==== TUTUORIAL ====*/}
         <View style={{ width: "95%" }}>
           <ListItem.Accordion
             onPress={() => toggleTab("Tutorial")}
@@ -53,7 +58,7 @@ function HomeScreen() {
             </ListItem>
           </ListItem.Accordion>
 
-          {/* Calculator */}
+          {/*====== CALCULATOR ======= */}
           <ListItem.Accordion
             onPress={() => toggleTab("Calculator")}
             isExpanded={tabs[1].isOpen}
