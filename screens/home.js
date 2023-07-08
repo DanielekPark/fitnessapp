@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, ScrollView, ActivityIndicator, Image} from "react-native";
+import { View, Text, ScrollView, ActivityIndicator, Image } from "react-native";
 import Calculator from "../components/calculator/calculator";
-import { ListItem} from "@rneui/themed";
+import { ListItem } from "@rneui/themed";
 import styles from "../styles/style.module";
 
 function HomeScreen() {
@@ -33,12 +33,29 @@ function HomeScreen() {
 
   return (
     <ScrollView>
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: 'white' }}>
-        {/*====== LOGO =======*/}
-        <Image             
-          source={require('../assets/dumbbell.png')}
-          style={{height: 200, width: 200}}
-        />
+      <View
+        style={{
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "white",
+        }}
+      >
+        {/*====== Home screen images =======*/}
+        <View style={{flexDirection: 'row', width: '95%', paddingTop: 10, paddingBottom: 10}}>
+          <Image
+            source={require("../assets/dumbbell.png")}
+            style={{ height: 120, width: '33%' }}
+          />
+          <Image
+            source={require("../assets/stretch.png")}
+            style={{ height: 120, width: '33%' }}
+          />
+          <Image
+            source={require("../assets/biking.png")}
+            style={{ height: 120, width: '33%' }}
+          />
+        </View>
 
         {/*==== TUTUORIAL ====*/}
         <View style={{ width: "95%" }}>
@@ -46,7 +63,9 @@ function HomeScreen() {
             onPress={() => toggleTab("Tutorial")}
             isExpanded={tabs[0].isOpen}
             content={
-              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont]}>Tutorial</ListItem.Title>
+              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont]}>
+                Tutorial
+              </ListItem.Title>
             }
             topDivider
             bottomDivider
@@ -80,7 +99,9 @@ function HomeScreen() {
             onPress={() => toggleTab("Tips")}
             isExpanded={tabs[2].isOpen}
             content={
-              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont]}>Tips</ListItem.Title>
+              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont]}>
+                Tips
+              </ListItem.Title>
             }
             topDivider
             bottomDivider
