@@ -3,6 +3,7 @@ import { View, Text, ScrollView, ActivityIndicator, Image } from "react-native";
 import Calculator from "../components/calculator/calculator";
 import { ListItem } from "@rneui/themed";
 import styles from "../styles/style.module";
+import Tutorial from "../components/tutorial/tutorial";
 
 function HomeScreen() {
   const [tabs, setTabs] = useState([
@@ -42,18 +43,18 @@ function HomeScreen() {
         }}
       >
         {/*====== Home screen images =======*/}
-        <View style={{flexDirection: 'row', width: '95%', paddingTop: 10, paddingBottom: 10}}>
+        <View style={styles.homeImgContainer}>
           <Image
             source={require("../assets/dumbbell.png")}
-            style={{ height: 120, width: '33%' }}
+            style={styles.homeImg}
           />
           <Image
             source={require("../assets/stretch.png")}
-            style={{ height: 120, width: '33%' }}
+            style={styles.homeImg}
           />
           <Image
             source={require("../assets/biking.png")}
-            style={{ height: 120, width: '33%' }}
+            style={styles.homeImg}
           />
         </View>
 
@@ -72,7 +73,7 @@ function HomeScreen() {
           >
             <ListItem>
               <View>
-                <Text>Tutorial</Text>
+                <Tutorial />
               </View>
             </ListItem>
           </ListItem.Accordion>

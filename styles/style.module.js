@@ -2,6 +2,20 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   /* =======================
+    Home screen 
+    ======================= */
+  // IMAGES
+  homeImg: {
+    height: 120,
+    width: "33%",
+  },
+  homeImgContainer: {
+    flexDirection: "row",
+    width: "95%",
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  /* =======================
     Font color
     ======================= */
   aqua: {
