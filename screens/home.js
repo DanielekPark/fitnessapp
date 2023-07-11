@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, ScrollView, ActivityIndicator, Image } from "react-native";
+import { View, Text, ScrollView, Image } from "react-native";
 import Calculator from "../components/calculator/calculator";
 import { ListItem } from "@rneui/themed";
 import styles from "../styles/style.module";
@@ -53,7 +53,7 @@ function HomeScreen() {
             style={styles.homeImg}
           />
           <Image
-            source={require("../assets/biking.png")}
+            source={require("../assets/running.png")}
             style={styles.homeImg}
           />
         </View>
@@ -64,7 +64,7 @@ function HomeScreen() {
             onPress={() => toggleTab("Tutorial")}
             isExpanded={tabs[0].isOpen}
             content={
-              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont]}>
+              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont, styles.aqua]}>
                 Tutorial
               </ListItem.Title>
             }
@@ -83,7 +83,7 @@ function HomeScreen() {
             onPress={() => toggleTab("Calculator")}
             isExpanded={tabs[1].isOpen}
             content={
-              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont]}>
+              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont, styles.aqua]}>
                 Calculator
               </ListItem.Title>
             }
@@ -100,7 +100,7 @@ function HomeScreen() {
             onPress={() => toggleTab("Tips")}
             isExpanded={tabs[2].isOpen}
             content={
-              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont]}>
+              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont, styles.aqua]}>
                 Tips
               </ListItem.Title>
             }

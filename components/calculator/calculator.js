@@ -30,7 +30,7 @@ function Calculator() {
     <View style={[styles.calcWrapper, {height: Dimensions.get('window').height/2}]}>
       <View>
         <View>
-          <Text style={[styles.fontTwenty, styles.centerText, styles.smMarBottom, styles.smMarTop]}>
+          <Text style={[styles.fontTwenty, styles.centerText, styles.smMarBottom, styles.smMarTop, styles.aqua]}>
             Calculate your strength
           </Text>
           <Text style={[styles.centerText, styles.smMarBottom,]}>

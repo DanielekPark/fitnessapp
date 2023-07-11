@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   /* =======================
     Home screen 
     ======================= */
-  // IMAGES
+  /* =====Images===== */
   homeImg: {
     height: 120,
     width: "33%",
@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
       borderWidth: 0,
       borderRadius: 30,
     },
+    transparentBtn: { color: "transparent" },
     inactiveBtn: {
       backgroundColor: 'transparent',
       borderColor: "#33cccc",
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
       marginTop: 4,
       marginBottom: 4,   
     },
+    
   /* =======================
     Font color
     ======================= */
@@ -66,6 +68,9 @@ const styles = StyleSheet.create({
   fontTwenty: {
     fontSize: 20,
   },
+  fontAqua: {
+
+  },
   /* =======================
     Calculator styles 
     ======================= */
@@ -82,7 +87,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   calcBtn: {
-    backgroundColor: "#0ff",
+    backgroundColor: "#33cccc",
     borderRadius: 5,
     width: 300,
     marginLeft: "auto",
