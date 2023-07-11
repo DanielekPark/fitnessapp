@@ -16,10 +16,31 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   /* =======================
+    Button styles
+    ======================= */
+    activeBtn: {
+      backgroundColor: "#33cccc",
+      borderWidth: 0,
+      borderRadius: 30,
+    },
+    inactiveBtn: {
+      backgroundColor: 'transparent',
+      borderColor: "#33cccc",
+      borderWidth: 1,
+      borderRadius: 30,
+    },
+    btnContainer: {
+      borderColor: 'transparent',
+    },
+    btnWrapper: {
+      marginTop: 4,
+      marginBottom: 4,   
+    },
+  /* =======================
     Font color
     ======================= */
   aqua: {
-    color: "#0ff",
+    color: "#33cccc",
   },
   /* =======================
     Accordion styles
