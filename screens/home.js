@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { View, Text, ScrollView, Image } from "react-native";
 import Calculator from "../components/calculator/calculator";
 import { ListItem } from "@rneui/themed";
@@ -64,7 +64,9 @@ function HomeScreen() {
             onPress={() => toggleTab("Tutorial")}
             isExpanded={tabs[0].isOpen}
             content={
-              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont, styles.aqua]}>
+              <ListItem.Title
+                style={[{ width: "90%" }, styles.accordionFont, styles.aqua]}
+              >
                 Tutorial
               </ListItem.Title>
             }
@@ -83,7 +85,9 @@ function HomeScreen() {
             onPress={() => toggleTab("Calculator")}
             isExpanded={tabs[1].isOpen}
             content={
-              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont, styles.aqua]}>
+              <ListItem.Title
+                style={[{ width: "90%" }, styles.accordionFont, styles.aqua]}
+              >
                 Calculator
               </ListItem.Title>
             }
@@ -100,7 +104,9 @@ function HomeScreen() {
             onPress={() => toggleTab("Tips")}
             isExpanded={tabs[2].isOpen}
             content={
-              <ListItem.Title style={[{ width: "90%" }, styles.accordionFont, styles.aqua]}>
+              <ListItem.Title
+                style={[{ width: "90%" }, styles.accordionFont, styles.aqua]}
+              >
                 Tips
               </ListItem.Title>
             }

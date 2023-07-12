@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { View, Dimensions } from "react-native";
-import { Button, Divider, Text, Input } from "@rneui/themed";
+import { Button, Text, Input } from "@rneui/themed";
 import styles from "../../styles/style.module";
 
 function Calculator() {
@@ -15,7 +15,7 @@ function Calculator() {
     //converts data received from user to number
     const weight = fitData.weight / 1;
     const repetitions = fitData.reps / 1;
-    
+
     if (!weight || weight < 7) return;
     if (!repetitions) return;
     if (repetitions < 1 || repetitions > 15) return;
@@ -27,17 +27,30 @@ function Calculator() {
   };
 
   return (
-    <View style={[styles.calcWrapper, {height: Dimensions.get('window').height/2}]}>
+    <View
+      style={[
+        styles.calcWrapper,
+        { height: Dimensions.get("window").height / 2 },
+      ]}
+    >
       <View>
         <View>
-          <Text style={[styles.fontTwenty, styles.centerText, styles.smMarBottom, styles.smMarTop, styles.aqua]}>
+          <Text
+            style={[
+              styles.fontTwenty,
+              styles.centerText,
+              styles.smMarBottom,
+              styles.smMarTop,
+              styles.aqua,
+            ]}
+          >
             Calculate your strength
           </Text>
-          <Text style={[styles.centerText, styles.smMarBottom,]}>
-            {fitData.oneRepMax
-              ? `Estimated 1 repetition max ${fitData.oneRepMax}`
-              : ""}
-          </Text>
+          {fitData.oneRepMax > 0 && (
+            <Text style={[styles.centerText, styles.smMarBottom]}>
+              {`Estimated 1 repetition max ${fitData.oneRepMax}`}
+            </Text>
+          )}
         </View>
         <View style={styles.smMarTop}>
           <Input
@@ -56,7 +69,12 @@ function Calculator() {
             inputContainerStyle={styles.inputContainer}
             inputStyle={styles.inputStyle}
           />
-          <Button buttonStyle={styles.calcBtn} title="Calculate" onPress={calcStrength} containerStyle={{marginTop: 100}} />
+          <Button
+            buttonStyle={styles.calcBtn}
+            title="Calculate"
+            onPress={calcStrength}
+            containerStyle={{ marginTop: 100 }}
+          />
         </View>
       </View>
     </View>

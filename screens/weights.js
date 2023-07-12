@@ -1,19 +1,20 @@
 import { View, Image, ScrollView } from "react-native";
-import React, { useEffect, useState } from "react";
-import { ButtonGroup, Text } from "@rneui/base";
+import React, { useState } from "react";
 import styles from "../styles/style.module";
+import LiftingQuestionaire from "../components/weights/liftingquestionaire";
+import Selections from "../components/weights/selections";
 
 function WeightsScreen() {
   const [userData, setUserData] = useState({
     level: ["Beginner", "Intermediate", "Returning user"],
-    levelIndex: "",
+    levelIndex: '',
     goals: ["Gain muscle", "Get stronger"],
-    goalIndex: "",
+    goalIndex: '',
     availability: [2, 3, 4],
-    availIndex: "",
+    availIndex: '',
   });
 
-  // updates user input on button presses
+  //sets users preferences by button presses
   const updateUserData = (value, key) => {
     setUserData({ ...userData, [key]: value });
   };
@@ -38,109 +39,17 @@ function WeightsScreen() {
           </View>
         </View>
         <View style={styles.smMarBottom}>
-          <View>
-            <View>
-              <View>
-                <Text
-                  style={[
-                    styles.fontTwenty,
-                    styles.centerText,
-                    styles.smMarBottom,
-                    styles.smMarTop,
-                    styles.aqua
-                  ]}
-                >
-                  Choose your level
-                </Text>
-              </View>
-              <View>
-                <View>
-                  <ButtonGroup
-                    buttons={userData.level}
-                    onPress={(value) => updateUserData(value, "levelIndex")}
-                    selectedIndex={userData.levelIndex}
-                    containerStyle={styles.btnContainer}
-                    selectedButtonStyle={styles.activeBtn}
-                    buttonStyle={styles.inactiveBtn}
-                    innerBorderStyle={styles.transparentBtn}
-                    buttonContainerStyle={styles.btnWrapper}
-                    textStyle={styles.aqua}
-                    vertical
-                  />
-                </View>
-              </View>
-            </View>
-            <View>
-              <View>
-                <Text
-                  style={[
-                    styles.fontTwenty,
-                    styles.centerText,
-                    styles.smMarBottom,
-                    styles.smMarTop,
-                    styles.aqua
-                  ]}
-                >
-                  Exercise goals
-                </Text>
-              </View>
-              <View>
-                <View>
-                  <ButtonGroup
-                    buttons={userData.goals}
-                    onPress={(value) => updateUserData(value, "goalIndex")}
-                    selectedIndex={userData.goalIndex}
-                    containerStyle={styles.btnContainer}
-                    selectedButtonStyle={styles.activeBtn}
-                    buttonStyle={[styles.inactiveBtn, styles.aqua]}
-                    innerBorderStyle={styles.transparentBtn}
-                    buttonContainerStyle={styles.btnWrapper}
-                    textStyle={styles.aqua}
-                    vertical
-                  />
-                </View>
-              </View>
-            </View>
-            <View>
-              <View>
-                <Text
-                  style={[
-                    styles.fontTwenty,
-                    styles.centerText,
-                    styles.smMarBottom,
-                    styles.smMarTop,
-                    styles.aqua
-                  ]}
-                >
-                Days available per week 
-                </Text>
-              </View>
-              <View>
-                <View>
-                  <ButtonGroup
-                    buttons={userData.availability}
-                    selectedIndex={userData.availIndex}
-                    onPress={(value) => updateUserData(value, "availIndex")}
-                    containerStyle={styles.btnContainer}
-                    selectedButtonStyle={styles.activeBtn}
-                    buttonStyle={styles.inactiveBtn}
-                    buttonContainerStyle={styles.btnWrapper}
-                    innerBorderStyle={styles.transparentBtn}
-                    textStyle={styles.aqua}
-                    vertical
-                  />
-                </View>
-              </View>
-            </View>
-          </View>
-          {/* Workout option
-        //2. Create section for muscle groups (choose chest, abs, leg, lower or abs)
-        //exercise buttons show exercise picture
-        //2a. user chooses exercises
-        //2c. user provides data from previous workout and selects exercises from previous workout
-        //2d. or user can create a new workout, and then follows step 2
-        //3. workout schedule is provided after data submission
-      */}
+          {/* ======= Weight lifting questionaire =========*/}
+          {userData.levelIndex === "" || userData.goalIndex === "" || userData.availIndex === "" ?
+          (<LiftingQuestionaire
+              userData={userData}
+              setUserData={setUserData}
+              updateUserData={updateUserData}
+            />
+          ) : (
+            /* ======= User chooses exercises =========*/
+            <Selections userData={userData} setUserData={setUserData} />
+          )}
         </View>
       </View>
     </ScrollView>
