@@ -9,3 +9,6 @@ react native safe area context https://www.npmjs.com/package/react-native-safe-a
 icons
 https://icons8.com/
 https://www.iconfinder.com/
+
+Testing Framework
+[Jest](https://jestjs.io/docs/getting-started)
