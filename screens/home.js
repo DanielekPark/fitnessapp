@@ -19,6 +19,10 @@ function HomeScreen() {
       title: "Tips",
       isOpen: false,
     },
+    {
+      title: "Strategies",
+      isOpen: false,
+    },
   ]);
 
   //Collapses or expands tab when pressed
@@ -108,6 +112,25 @@ function HomeScreen() {
                 style={[{ width: "90%" }, styles.accordionFont, styles.aqua]}
               >
                 Tips
+              </ListItem.Title>
+            }
+            topDivider
+            bottomDivider
+          >
+            <ListItem>
+              <View>
+                <Text>Tips</Text>
+              </View>
+            </ListItem>
+          </ListItem.Accordion>
+          <ListItem.Accordion
+            onPress={() => toggleTab("Strategies")}
+            isExpanded={tabs[3].isOpen}
+            content={
+              <ListItem.Title
+                style={[{ width: "90%" }, styles.accordionFont, styles.aqua]}
+              >
+                Strategies
               </ListItem.Title>
             }
             topDivider

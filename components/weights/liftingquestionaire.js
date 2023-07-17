@@ -7,8 +7,7 @@ const LiftingQuestionaire = (props) => {
   const {userData, setUserData, updateUserData} = props; 
 
   return (
-    <>
-      <View style={styles.smMarBottom}>
+      <View style={[styles.smMarBottom, styles.screenWidth]}>
         <View>
           <View>
             <View>
@@ -104,7 +103,6 @@ const LiftingQuestionaire = (props) => {
             </View>
           </View>
         </View>
-      </View>
         {/* Workout option
         //2. Create section for muscle groups (choose chest, abs, leg, lower or abs)
         //exercise buttons show exercise picture
@@ -113,7 +111,7 @@ const LiftingQuestionaire = (props) => {
         //2d. or user can create a new workout, and then follows step 2
         //3. workout schedule is provided after data submission
       */}
-    </>
+      </View>
   );
 };
 

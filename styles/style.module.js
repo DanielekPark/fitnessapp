@@ -16,6 +16,18 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   /* =======================
+    Screen styles
+    ======================= */
+    topImgWrap: {
+      marginLeft: 'auto',
+      marginRight: 'auto' 
+    },
+    screenWrapper: {
+      width: '95%',
+      marginLeft: 'auto',
+      marginRight: 'auto' 
+    },
+  /* =======================
     Button styles
     ======================= */
     activeBtn: {
@@ -37,13 +49,18 @@ const styles = StyleSheet.create({
       marginTop: 4,
       marginBottom: 4,   
     },
-    
+    // Start over button
+    btnTitleContain: {
+      width: 200,
+      marginVertical: 10,
+      marginLeft: 'auto', 
+      marginRight: 'auto'
+    },
   /* =======================
-    Font color
+    Color
     ======================= */
-  aqua: {
-    color: "#33cccc",
-  },
+    aqua: {color: "#33cccc"},
+    aquaBg: {backgroundColor: "#33cccc"},
   /* =======================
     Accordion styles
     ======================= */
@@ -68,9 +85,6 @@ const styles = StyleSheet.create({
   fontTwenty: {
     fontSize: 20,
   },
-  fontAqua: {
-
-  },
   /* =======================
     Calculator styles 
     ======================= */
@@ -93,6 +107,10 @@ const styles = StyleSheet.create({
     marginLeft: "auto",
     marginRight: "auto",
   },
+  redBrdr: {
+    borderColor: 'red',
+    borderWidth: 3,
+  }
 });
 
 export default styles;
