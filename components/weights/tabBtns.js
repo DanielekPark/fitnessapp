@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { View, Text } from "react-native";
+import React from "react";
 import styles from "../../styles/style.module";
-import { Button, Tab, TabView } from "@rneui/base";
+import { Tab } from "@rneui/base";
 
 const TabBtns = ({ availIndex, index, setIndex }) => {
   if (availIndex === 2) {

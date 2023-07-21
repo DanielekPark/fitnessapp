@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { View, Text } from "react-native";
 import styles from "../../styles/style.module";
-import { Button, Tab, TabView } from "@rneui/base";
+import { Button } from "@rneui/base";
 import TabBtns from "./tabBtns";
+import ExerciseSelections from "./exerciseSection";
 
-const Selections = ({
+const LiftingOptions = ({
   level,
   levelIndex,
   goals,
@@ -50,9 +51,9 @@ const Selections = ({
           }
         />
       </View>
-      {/* ======= Exercises tab selection ======== */}
       <View style={styles.smMarTop}>
         <View>
+        {/* ======= Exercises tab selection ======== */}
           <TabBtns availIndex={availIndex} index={index} setIndex={setIndex} />
         </View>
         <View
@@ -63,21 +64,11 @@ const Selections = ({
           }}
         >
           {/* show days based on user selection */}
-          <TabView value={index} onChange={setIndex} animationType="spring">
-            <TabView.Item style={{ backgroundColor: "red", width: "100%" }}>
-              <Text h1>Day 1</Text>
-            </TabView.Item>
-            <TabView.Item style={{ backgroundColor: "yellow", width: "100%" }}>
-              <Text h1>Day 2</Text>
-            </TabView.Item>
-            <TabView.Item style={{ backgroundColor: "green", width: "100%" }}>
-              <Text h1>Day 3</Text>
-            </TabView.Item>
-          </TabView>
+          <ExerciseSelections availIndex={availIndex} index={index} setIndex={setIndex} />
         </View>
       </View>
     </View>
   );
 };
 
-export default Selections;
+export default LiftingOptions;

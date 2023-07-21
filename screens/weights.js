@@ -2,7 +2,8 @@ import { View, Image, ScrollView } from "react-native";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/style.module";
 import LiftingQuestionaire from "../components/weights/liftingquestionaire";
-import Selections from "../components/weights/selections";
+import LiftingOptions from "../components/weights/liftingOptions";
+import exercises from "../components/weights/exercises";
 
 function WeightsScreen() {
   const [userData, setUserData] = useState({
@@ -12,15 +13,11 @@ function WeightsScreen() {
     levelIndex: '',
     goalIndex: '',
     availIndex: '',
+    exercises
     // availIndex: 2,
     // levelIndex: 'Beginner',
     // goalIndex: 'Gain muscle',
   });
-
-  //sets users preferences by button presses
-  const updateUserData = (value, key) => {
-    setUserData({ ...userData, [key]: value });
-  };
 
   return (
     <ScrollView>
@@ -40,11 +37,10 @@ function WeightsScreen() {
           (<LiftingQuestionaire
               userData={userData}
               setUserData={setUserData}
-              updateUserData={updateUserData}
             />
           ) : (
           /* ======= User chooses exercises =========*/
-            <Selections 
+            <LiftingOptions
               {...userData} 
               setUserData={setUserData} />
           )}

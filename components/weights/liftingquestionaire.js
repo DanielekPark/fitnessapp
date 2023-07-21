@@ -4,7 +4,12 @@ import { ButtonGroup } from "@rneui/themed";
 import styles from "../../styles/style.module";
 
 const LiftingQuestionaire = (props) => {
-  const {userData, setUserData, updateUserData} = props; 
+  const {userData, setUserData} = props; 
+
+    //sets users preferences by button presses
+    const updateUserData = (value, key) => {
+      setUserData({ ...userData, [key]: value });
+    };
 
   return (
       <View style={[styles.smMarBottom, styles.screenWidth]}>

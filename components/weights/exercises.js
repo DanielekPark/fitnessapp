@@ -191,7 +191,7 @@ const exercises = [
     goal: "",
   },
   {
-    name: "Cable twists",
+    name: "Twists",
     muscleGroup: "core",
     chosen: false,
     weight: 0,
@@ -253,5 +253,11 @@ const exercises = [
     goal: "",
   },
 ];
+/* 
+Images needed for:
+Calf raise
+Seated calf raise
+Leg lifts
+*/
 
 export default exercises;
