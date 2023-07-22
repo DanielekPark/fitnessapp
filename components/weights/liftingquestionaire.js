@@ -108,14 +108,6 @@ const LiftingQuestionaire = (props) => {
             </View>
           </View>
         </View>
-        {/* Workout option
-        //2. Create section for muscle groups (choose chest, abs, leg, lower or abs)
-        //exercise buttons show exercise picture
-        //2a. user chooses exercises
-        //2c. user provides data from previous workout and selects exercises from previous workout
-        //2d. or user can create a new workout, and then follows step 2
-        //3. workout schedule is provided after data submission
-      */}
       </View>
   );
 };

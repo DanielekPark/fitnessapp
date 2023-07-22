@@ -1,7 +1,7 @@
 import { View, Image, ScrollView } from "react-native";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/style.module";
-import LiftingQuestionaire from "../components/weights/liftingquestionaire";
+import LiftingQuestionaire from "../components/weights/liftingQuestionaire";
 import LiftingOptions from "../components/weights/liftingOptions";
 import exercises from "../components/weights/exercises";
 
@@ -10,13 +10,13 @@ function WeightsScreen() {
     level: ["Beginner", "Intermediate", "Returning user"],
     goals: ["Gain muscle", "Get stronger"],
     availability: [2, 3, 4],
-    levelIndex: '',
-    goalIndex: '',
-    availIndex: '',
-    exercises
-    // availIndex: 2,
-    // levelIndex: 'Beginner',
-    // goalIndex: 'Gain muscle',
+    // levelIndex: '',
+    // goalIndex: '',
+    // availIndex: '',
+    exercises,
+    availIndex: 2,
+    levelIndex: 'Beginner',
+    goalIndex: 'Gain muscle',
   });
 
   return (

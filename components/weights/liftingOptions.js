@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import styles from "../../styles/style.module";
 import { Button } from "@rneui/base";
 import TabBtns from "./tabBtns";
-import ExerciseSelections from "./exerciseSection";
+import ExerciseSelections from "./exerciseSelections";
 
 const LiftingOptions = ({
   level,
@@ -54,17 +54,23 @@ const LiftingOptions = ({
       <View style={styles.smMarTop}>
         <View>
         {/* ======= Exercises tab selection ======== */}
-          <TabBtns availIndex={availIndex} index={index} setIndex={setIndex} />
+          <TabBtns 
+            availIndex={availIndex} 
+            index={index} 
+            setIndex={setIndex} />
         </View>
         <View
           style={{
-            height: 200,
+            height: 350,
             borderColor: "black",
             borderWidth: 3,
           }}
         >
-          {/* show days based on user selection */}
-          <ExerciseSelections availIndex={availIndex} index={index} setIndex={setIndex} />
+          {/* Show exercises */}
+          <ExerciseSelections 
+            availIndex={availIndex} 
+            index={index} 
+            setIndex={setIndex} />
         </View>
       </View>
     </View>

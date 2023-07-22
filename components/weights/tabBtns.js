@@ -3,6 +3,13 @@ import styles from "../../styles/style.module";
 import { Tab } from "@rneui/base";
 
 const TabBtns = ({ availIndex, index, setIndex }) => {
+/* Workout option
+        //2. Create section for muscle groups (choose chest, abs, leg, lower or abs)
+        //exercise buttons show exercise picture
+        //2a. user chooses exercises
+        //2c. user provides data from previous workout and selects exercises from previous workout
+        //2d. or user can create a new workout, and then follows step 2
+      */
   if (availIndex === 2) {
     return (
       <Tab
@@ -41,17 +48,17 @@ const TabBtns = ({ availIndex, index, setIndex }) => {
         variant="primary"
       >
         <Tab.Item
-          title="Recent"
+          title="Chest & Triceps"
           titleStyle={{ fontSize: 12 }}
           icon={{ name: "timer", type: "ionicon", color: "white" }}
         />
         <Tab.Item
-          title="favorite"
+          title="Back & Biceps"
           titleStyle={{ fontSize: 12 }}
           icon={{ name: "heart", type: "ionicon", color: "white" }}
         />
         <Tab.Item
-          title="favorite"
+          title="Leg & Core"
           titleStyle={{ fontSize: 12 }}
           icon={{ name: "heart", type: "ionicon", color: "white" }}
         />
