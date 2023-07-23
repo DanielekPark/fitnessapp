@@ -8,12 +8,15 @@ const exercises = [
     muscleGroup: "thigh",
     chosen: false,
     weight: 0,
-    reps: 0,
+    reps: 0, 
     firstSet: 0,
     secondSet: 0,
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "multi",
   },
   {
     name: "Squat",
@@ -26,6 +29,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "multi",
   },
   {
     name: "Seated knee extension",
@@ -38,6 +44,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "single",
   },
   // HAMSTRING
   {
@@ -51,6 +60,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "multi",
   },
   {
     name: "Hamstring curl",
@@ -63,6 +75,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "single",
   },
   // CALVES
   {
@@ -76,6 +91,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "single",
   },
   {
     name: "Seated calf raise",
@@ -88,6 +106,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "single",
   },
   // CHEST
   {
@@ -101,6 +122,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "multi",
   },
   {
     name: "Dips",
@@ -113,6 +137,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "multi",
   },
   // BACK
   {
@@ -126,6 +153,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "multi",
   },
   {
     name: "Pull up machine",
@@ -138,6 +168,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "multi",
   },
   //SHOULDERS
   {
@@ -151,6 +184,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "single",
   },
   {
     name: "Shrugs",
@@ -163,7 +199,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
-    color: "#43aa8b",
+    startImg: "",
+    endImg: "",
+    movement: "single",
   },
   //CORE
   {
@@ -177,6 +215,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "single",
   },
   {
     name: "Crunches",
@@ -189,6 +230,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "single",
   },
   {
     name: "Twists",
@@ -201,6 +245,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "single",
   },
   //BICEPS
   {
@@ -214,6 +261,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "single",
   },
   {
     name: "Concentration curls",
@@ -226,6 +276,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "single",
   },
   //TRICEPS
   {
@@ -239,6 +292,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "single",
   },
   {
     name: "Tricep overhead extension",
@@ -251,6 +307,9 @@ const exercises = [
     thirdSet: 0,
     availability: 0,
     goal: "",
+    startImg: "",
+    endImg: "",
+    movement: "single",
   },
 ];
 /* 

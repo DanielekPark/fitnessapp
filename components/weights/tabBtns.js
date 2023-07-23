@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../styles/style.module";
 import { Tab } from "@rneui/base";
 
-const TabBtns = ({ availIndex, index, setIndex }) => {
+const TabBtns = ({ userData, index, setIndex }) => {
 /* Workout option
         //2. Create section for muscle groups (choose chest, abs, leg, lower or abs)
         //exercise buttons show exercise picture
@@ -10,7 +10,7 @@ const TabBtns = ({ availIndex, index, setIndex }) => {
         //2c. user provides data from previous workout and selects exercises from previous workout
         //2d. or user can create a new workout, and then follows step 2
       */
-  if (availIndex === 2) {
+  if (userData.availIndex === 2) {
     return (
       <Tab
         value={index}
@@ -36,7 +36,7 @@ const TabBtns = ({ availIndex, index, setIndex }) => {
     );
   }
 
-  if (availIndex === 3) {
+  if (userData.availIndex === 3) {
     return (
       <Tab
         value={index}
@@ -66,7 +66,7 @@ const TabBtns = ({ availIndex, index, setIndex }) => {
     );
   }
 
-  if (availIndex === 4) {
+  if (userData.availIndex === 4) {
     return (
       <Tab
         value={index}

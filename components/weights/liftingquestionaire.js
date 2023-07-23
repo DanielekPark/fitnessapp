@@ -3,8 +3,7 @@ import { View, Text } from "react-native";
 import { ButtonGroup } from "@rneui/themed";
 import styles from "../../styles/style.module";
 
-const LiftingQuestionaire = (props) => {
-  const {userData, setUserData} = props; 
+const LiftingQuestionaire = ({userData, setUserData} ) => {
 
     //sets users preferences by button presses
     const updateUserData = (value, key) => {

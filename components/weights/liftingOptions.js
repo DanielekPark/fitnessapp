@@ -5,16 +5,7 @@ import { Button } from "@rneui/base";
 import TabBtns from "./tabBtns";
 import ExerciseSelections from "./exerciseSelections";
 
-const LiftingOptions = ({
-  level,
-  levelIndex,
-  goals,
-  goalIndex,
-  availability,
-  availIndex,
-  userData,
-  setUserData,
-}) => {
+const LiftingOptions = ({ userData, setUserData}) => {
   const [index, setIndex] = useState(0);
 
   return (
@@ -55,7 +46,7 @@ const LiftingOptions = ({
         <View>
         {/* ======= Exercises tab selection ======== */}
           <TabBtns 
-            availIndex={availIndex} 
+            userData={userData}
             index={index} 
             setIndex={setIndex} />
         </View>
@@ -68,7 +59,7 @@ const LiftingOptions = ({
         >
           {/* Show exercises */}
           <ExerciseSelections 
-            availIndex={availIndex} 
+            userData={userData} 
             index={index} 
             setIndex={setIndex} />
         </View>

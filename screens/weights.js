@@ -13,14 +13,15 @@ function WeightsScreen() {
     // levelIndex: '',
     // goalIndex: '',
     // availIndex: '',
-    exercises,
     availIndex: 2,
     levelIndex: 'Beginner',
     goalIndex: 'Gain muscle',
+    exercises,
+    plan: [],
   });
 
   return (
-    <ScrollView>
+    // <ScrollView>
       <View style={[styles.screenWrapper]}>
         <View style={styles.topImgWrap}>
           {/* ======= Dumbbell Image =========*/}
@@ -39,14 +40,14 @@ function WeightsScreen() {
               setUserData={setUserData}
             />
           ) : (
-          /* ======= User chooses exercises =========*/
+          /* ======= Displays exercises, user chooses =========*/
             <LiftingOptions
-              {...userData} 
+              userData={userData} 
               setUserData={setUserData} />
           )}
         </View>
       </View>
-    </ScrollView>
+    //  </ScrollView> 
   );
 }
 
