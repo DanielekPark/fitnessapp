@@ -18,7 +18,12 @@ function WeightsScreen() {
     goalIndex: 'Gain muscle',
     exercises,
     plan: [],
+    previewPlan: false,
   });
+
+  // useEffect(() => {
+  //   console.log(userData.exercises)
+  // }, [userData])
 
   return (
     // <ScrollView>

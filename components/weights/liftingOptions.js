@@ -60,6 +60,7 @@ const LiftingOptions = ({ userData, setUserData}) => {
           {/* Show exercises */}
           <ExerciseSelections 
             userData={userData} 
+            setUserData={setUserData} 
             index={index} 
             setIndex={setIndex} />
         </View>

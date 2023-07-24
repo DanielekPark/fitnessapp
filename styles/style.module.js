@@ -110,7 +110,13 @@ const styles = StyleSheet.create({
   redBrdr: {
     borderColor: 'red',
     borderWidth: 3,
-  }
+  }, 
+    /* =======================
+    Weights Screen 
+    ======================= */
+    selected: {
+      opacity: 0.5
+    }, 
 });
 
 export default styles;
