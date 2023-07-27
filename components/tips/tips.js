@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 
 const Tips = () => {
   const glossaryTerms = [
@@ -19,17 +19,17 @@ const Tips = () => {
   return (
     <View>
       <View>
-        <Text variant="headlineMedium" style={[styles.txtCenter, styles.title]}>
+        <Text >
           Tips
         </Text>
-        <Text variant="headlineSmall" style={styles.title}>
+        <Text>
           Glossary terms
         </Text>
         <View>
           {glossaryTerms.map((item) => {
             return (
-              <View style={styles.term} key={`${item.term}term`}>
-                <Text variant="titleMedium" style={styles.term}>
+              <View>
+                <Text key={`${item.term}`}>
                   {`\u2022 ${item.term}: ${item.def}`}
                 </Text>
               </View>
@@ -37,23 +37,23 @@ const Tips = () => {
           })}
         </View>
 
-        <Text variant="headlineSmall" style={styles.subHeading}>
+        <Text>
           Training Age
         </Text>
-        <Text variant="titleMedium" style={styles.term}>
+        <Text>
           {`\u2022 Beginners: less than 2 months`}
         </Text>
-        <Text variant="titleMedium" style={styles.term}>
+        <Text>
           {`\u2022 Intermediate: 2 - 6 months`}
         </Text>
-        <Text variant="titleMedium" style={styles.term}>
+        <Text>
           {`\u2022 Advanced: more than or equal to 1 year`}
         </Text>
 
-        <Text variant="headlineSmall" style={styles.subHeading}>
+        <Text>
           Exercise frequency
         </Text>
-        <Text variant="titleMedium" style={styles.term}>
+        <Text>
           After exercising a muscle group (e.g. chest, back), wait a minimum 48
           hours train the same muscle group again.
         </Text>

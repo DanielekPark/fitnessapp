@@ -4,7 +4,7 @@ import Calculator from "../components/calculator/calculator";
 import { ListItem } from "@rneui/themed";
 import styles from "../styles/style.module";
 import Tutorial from "../components/tutorial/tutorial";
-import Tips from '../components/tips'
+import Tips from "../components/tips/tips";
 
 function HomeScreen() {
   const [tabs, setTabs] = useState([
@@ -112,16 +112,14 @@ function HomeScreen() {
               <ListItem.Title
                 style={[{ width: "90%" }, styles.accordionFont, styles.aqua]}
               >
-                <Tips />
+                Tips
               </ListItem.Title>
             }
             topDivider
             bottomDivider
           >
             <ListItem>
-              <View>
-                <Text>Tips</Text>
-              </View>
+              <Tips />
             </ListItem>
           </ListItem.Accordion>
           <ListItem.Accordion
